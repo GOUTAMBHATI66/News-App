@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    /* border: 2px solid black; */
+    /* height: 5rem; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #e4f7f7;
+    top: 0; right: 0; left: 0;
+    position: fixed;
+    /* z-index: 100; */
+}
+
+nav .nav_logo{
+    position: relative;
+    height: 90px;
+    width: 90px;
+    overflow: hidden;
+}
+
+nav .nav_logo .logo_img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid black; */
+    background-color: #e0fcfc;
+}
+
+nav .nav_links{
+    display: flex;
+    gap: 1rem;
+}
+
+nav .nav_links a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #414040;
+}
+
+nav .nav_links a:hover{
+    color: #3796d5;
+    transform: scale(1.05);
+}
+
+nav .nav_links a.active{
+    color: #1d69a3;
+}
+
+nav .nav_search{
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+nav .nav_search .search_icon{
+    padding: 0.4rem 1.3rem 0.4rem 0.3rem; 
+    outline: none;
+    border: 0.1rem solid #afeaeaeb;
+    font-weight: 600;
+    color: #414040;
+}
+
+nav .nav_search .search_btn{
+    cursor: pointer;
+    padding: 0.5rem 1.2rem;
+    background-color: #3796d5; 
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    /* text-align: start; */
+}
+
+nav .nav_search .search_btn:hover{
+    transform: scaleX(1.05);
+}
+
+main{
+    /* border: 2px solid black; */
+    margin-top: 5.7rem;
+    padding: 2rem 4.3rem;
+}
+
+.cards_container{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    /* padding: 0 0.5rem; */
+    row-gap: 2rem;
+    column-gap: 2rem;
+
+}
+
+.cards_container .card{
+    max-width: 285px;
+    max-height: 380;
+    background-color: #f6f7f7;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card:hover{
+    background-color: #e2fcfc;
+}
+
+.cards_container .card .card_header img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.cards_container .card .card_content{
+    padding: 1rem;
+}
+
+.cards_container .card .card_content #news_source{
+    margin: 0.5rem 0;
+}
+
+.cards_container .card .card_content #news_desc{
+    margin-bottom: 0.5rem;
+}
+
+.cards_container .card .card_content button{
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #3796d5;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.cards_container .card .card_content button:hover{
+    transform: scaleX(1.05);
+}
+
+
+
+
+/* media querries */
+@media (max-width:1075px) {
+    .cards_container .card{
+        max-width: 330px;
+        min-height: 350px;
+    }
+}
+
+@media (max-width:850px) {
+    .cards_container .card{
+        max-width: 285px;
+        min-height: 330px;
+    }
+}
+
+@media (max-width:760px) {
+    .cards_container .card{
+        max-width: 260px;
+        min-height: 300px;
+    }
+
+    nav .nav_search input {
+        width: 8rem;
+    }
+}
+
+@media (max-width:710px) {
+
+    main{
+        margin-top: 4.4rem;
+        padding: 2rem 3rem;
+    }
+
+    nav .nav_logo{
+        height: 70px;
+        width: 70px
+    }
+
+    nav .nav_links a{
+        font-size: 0.8rem;
+    }
+
+    nav .nav_search input{
+        height: 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    nav .nav_search .search_btn{
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .cards_container .card{
+        max-width: 230px;
+        min-height: 260px;
+    }
+}
+
+@media (max-width:595px) {
+
+    .cards_container .card .card_content{
+        padding: 0.4rem;
+    }
+
+    nav .nav_links #Sports{
+        display: none;
+    }
+
+    .cards_container .card{
+        max-width: 200px;
+        min-height: 240px;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    h5{
+        font-size: 0.8rem;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+
+    .card .card_content #news_btn{
+        font-size: 0.7rem;
+        padding: 0.3rem 0.4rem;
+    }
+}
+
+@media (max-width:535px) {
+
+    main{
+        margin-top: 3.2rem;
+        padding: 1.5rem 1rem;
+    }
+
+    nav .nav_logo{
+        height: 50px;
+        width: 50px
+    }
+
+    nav .nav_links a{
+        font-size: 0.7rem;
+    }
+
+    nav .nav_search input{
+        width: 5.2rem;
+        height: 1.3rem;
+        font-size: 0.6rem;
+    }
+
+    nav .nav_search .search_btn{
+        font-size: 0.6rem;
+        padding: 0.2rem 0.3rem; 
+    }
+
+    .cards_container .card{
+        max-width: 150px;
+        min-height: 210px;
+    }
+
+    .cards_container .card .card_content{
+        padding: 0.3rem;
+    }
+
+    h3{
+        font-size: 0.8rem;
+    }
+    h5{
+        font-size: 0.7rem;
+    }
+    p{
+        font-size: 0.6rem;
+    }
+
+    .card .card_content #news_btn{
+        font-size: 0.6rem;
+        padding: 0.2rem 0.3rem;
+    }
+} 
+
+@media (max-width:435px) {
+
+    .cards_container .card{
+        max-width: 120px;
+        min-height: 170px;
+    }
+
+    h3{
+        font-size: 0.7rem;
+    }
+    h5{
+        font-size: 0.6rem;
+    }
+    p{
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width:375px) {
+    nav .nav_links #Finance{
+        display: none;
+    }
+
+    main{
+        padding: 1.3rem 1.5rem;
+    }
+}
+
+@media (max-width:330px) {
+    nav .nav_links{
+        display: none;
+    }
+
+    main{
+        padding: 1rem 1rem;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav_logo">
+            <a href="#"> <img class="logo_img" src="News Logo.png" ></a>
+        </div>
+
+        <div class="nav_links">
+            <a href="#" id="Techology" onclick="onNavItemClick('Techology')">Techology</a>
+            <a href="#" id="Politics" onclick="onNavItemClick('Politics')" >Politics</a>
+            <a href="#" id="Finance" onclick="onNavItemClick('Finance')" >Finance</a>
+            <a href="#" id="Sports" onclick="onNavItemClick('Sports')" >Sports</a>
+        </div>
+
+        <div class="nav_search">
+            <input type="text" class="search_icon" placeholder="e.g. Science">
+            <button class="search_btn">Search</button>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="cards_container">
+
+        </div>
+    </main>
+
+    <template id="card_template">
+        <div class="card">
+            <div class="card_header">
+                <img src="https://via.placeholder.com/400x250" class="card_header_img">
+            </div>
+            <div class="card_content">
+                <h3 id="news_title">This is the Title</h3>
+                <h5 id="news_source">End Gadget 28/10/2023</h5>
+                <p id="news_desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus consequuntur soluta fuga inventore ullam quia nihil possimus iure labore</p>
+                <button id="news_btn">Read More</button>
+            </div>
+        </div>
+
+    </template>
+
+
+
+    <!-- custom JS -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
