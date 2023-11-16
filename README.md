@@ -1,0 +1,1 @@
+# This is a news app and you can read here various news.
